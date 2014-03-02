@@ -24,8 +24,8 @@ function initialize_map(){
 	// adds the GeoJson to the map layer from route.js
 	map.featureLayer.setGeoJSON(geoJson_features);
 
-	
-	// this is the marker click listener 
+
+	// this is the marker click listener
 	map.featureLayer.on('click',function(e) {
 		$.get("/checkins/" + e.layer.feature.properties.location_id); // fyi this used to have another ,e.layer.etc
 		
